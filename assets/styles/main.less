@@ -1,0 +1,297 @@
+@secondary-bg-color: #363F48;
+@secondary-fg-color: #fff;
+@sidebar-width: 300px;
+
+@import "lib/bootstrap/less/bootstrap.less";
+@import url("./tomorrow.css");
+
+/*********************************************
+          GENERAL
+*********************************************/
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+.page-content {
+  margin: 24px 70px;
+}
+
+/*********************************************
+          LAYOUT
+*********************************************/
+
+#wrapper {
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+  top: 0;
+  left: @sidebar-width;
+  width: @sidebar-width;
+  background: @secondary-bg-color;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+#header-wrapper {
+  top: 0;
+  background: @secondary-bg-color;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+.sidebar-wrapper {
+  color: @secondary-fg-color;
+  a {
+    color: @secondary-fg-color;
+    &:hover {
+      transition: all 0.5s ease;
+      color: @brand-primary;
+    }
+  }
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+.sidebar-nav {
+  //position: absolute;
+  //top: 0;
+  //width: 250px;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+
+  li {
+    line-height: 40px;
+    text-indent: 20px;
+    display: inline;
+  }
+
+  li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline;
+    padding: 5px 10px;
+  }
+
+  li a:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+    text-decoration: none;
+  }
+
+  li a:active,
+  li a:focus {
+    text-decoration: none;
+  }
+
+  li .glyphicon, li .fa {
+    width: 17px;
+    left: -25px;
+    position: relative;
+    color: white;
+  }
+}
+
+.content-header {
+  height: 65px;
+  line-height: 65px;
+  background-color: @secondary-bg-color;
+  color: @secondary-fg-color;
+  position: relative;
+
+  .title {
+    margin: 0;
+    margin-left: 70px;
+    line-height: 65px;
+    display: inline-block;
+  }
+}
+
+#menu-toggle {
+  display: none;
+
+  position: absolute;
+  margin-left: 15px;
+  top: 25%;
+}
+
+
+.inset {
+  padding: 20px;
+}
+
+.sidebar-brand {
+  margin-top: 10px;
+
+  .sidebar-brand-title {
+    .h2;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .sidebar-brand-img {
+    width: 95px;
+    height: 95px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: auto;
+    border: 3px solid #fff;
+    background-color: #fff;
+    .box-shadow(0 1px 1px rgba(0,0,0,0.3));
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 100%;
+      background: #f2f2f0;
+    }
+  }
+
+  .sidebar-brand-headline {
+    text-align: center;
+    padding: 20px;
+    font-weight: 300;
+  }
+}
+
+.sidebar-social {
+  font-size: @font-size-base * 2;
+  text-align: center;
+  padding: 20px;
+  font-weight: 300;
+  
+  > * {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+
+.poweredby {
+  text-align: center;
+  font-size: @font-size-small;
+  padding: 20px;
+  font-weight: 300;
+  width: 100%;
+  color: #888;
+  a {
+    color: #888;
+  }
+}
+
+
+.share-button {
+  width: 110px;
+  display: inline-block;
+}
+
+.fb-share-button {
+  top: -5px;
+}
+
+/*********************************************
+          MOBILE
+*********************************************/
+
+@media (max-width: @screen-md) {
+  .page-content {
+    margin: 24px 15px;
+  }
+
+  #wrapper {
+    padding-left: 0;
+  }
+
+  #sidebar-wrapper {
+    left: 0;
+  }
+
+  #wrapper.active {
+    position: relative;
+    left: @sidebar-width;
+  }
+
+  #wrapper.active #sidebar-wrapper {
+    left: @sidebar-width;
+    width: @sidebar-width;
+    transition: all 0.4s ease 0s;
+  }
+
+  #menu-toggle {
+    display: inline-block;
+  }
+
+  .inset {
+    padding: 15px;
+  }
+  
+  .content-header h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .content-header h1 {
+    font-size: 20px;
+  }
+}
+
+/*********************************************
+          CONTENT
+*********************************************/
+
+.article-list {
+  article {
+    margin-top: 60px;
+    &:first-child {
+      margin-top: 0px;
+    }
+    border-bottom: 1px solid #cacac8;
+
+    h2, h1 {
+      margin-top: 0;
+      text-align: center;
+    }
+    
+    .summary {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+article {
+  .timedate {
+    font-style: italic;
+  }
+  
+  .lead {
+    margin-top: 30px;
+  }
+
+  .share-buttons {
+    margin-top: 15px
+  }
+
+  .article-content {
+    margin-bottom: 50px;
+  }
+}
+
+

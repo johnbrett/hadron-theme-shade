@@ -1,0 +1,63 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  block head
+
+  //INJECT:styles:default
+  //END INJECT
+  
+  //INJECT:scripts:default
+  //END INJECT
+body
+  #wrapper
+    #header-wrapper.sidebar-wrapper
+      .sidebar-content
+      .sidebar-brand
+        .sidebar-brand-img
+          img(src="/public/img/brand_logo.jpg")
+        .sidebar-brand-title
+          a(href="/")= settings.website.title
+        .sidebar-brand-headline!= settings.website.headline
+      include partials/mainMenu
+      .sidebar-social
+        if settings.social.twitter.username
+          div(style="text-align: center")
+            a.twitter-follow-button(href="https://twitter.com/#{settings.social.twitter.username}", data-show-count="false",data-lang="en")
+              | Follow @#{settings.social.twitter.username}
+        if settings.social.twitter.username
+          a.fa.fa-twitter(href="https://twitter.com/#{settings.social.twitter.username}", target="_blank")
+        if settings.social.linkedin.username
+          a.fa.fa-linkedin(href="https://www.linkedin.com/in/#{settings.social.linkedin.username}", target="_blank")
+        if settings.social.github.username
+          a.fa.fa-github(href="https://github.com/#{settings.social.github.username}", target="_blank")
+      .poweredby
+        | Proudly powered by 
+        a(href="https://github.com/hadronjs/hadron", target="_blank") Hadron
+    #page-content-wrapper
+      .content-header.visible-xs.visible-sm
+        a.btn.btn-default#menu-toggle(type="button",href="#")
+          span.glyphicon.glyphicon-th-list
+        h1.title
+          = settings.website.title
+      .page-content
+        block main
+  
+  block footer
+
+  //INJECT:viewContributions:main-layout-body-footer
+  //END INJECT
+  
+  script.
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+    });
+  
+  if(settings.social.twitter.username)
+    script.
+      //Twitter button
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+      if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    
