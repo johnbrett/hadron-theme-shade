@@ -1,6 +1,8 @@
 {
-  "name": "mytheme",
-  "exclude": [
+    "name": "mytheme",
+    "exclude": [
     "assets/**", "views/**"
-  ]
+    ],
+    "overrides":[
+    ]
 }

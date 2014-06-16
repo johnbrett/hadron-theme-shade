@@ -76,6 +76,9 @@ h1 {
   text-align: center;
   list-style: none;
   padding: 0;
+  display: inline;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 
   li {
     line-height: 40px;
@@ -88,12 +91,14 @@ h1 {
     text-decoration: none;
     display: inline;
     padding: 5px 10px;
+    font-size: 25px;
   }
 
   li a:hover {
-    color: #fff;
-    background: rgba(255,255,255,0.2);
-    text-decoration: none;
+    span {
+      transition: all 0.5s ease;
+      color: @brand-primary;
+    }
   }
 
   li a:active,
@@ -176,16 +181,18 @@ h1 {
   text-align: center;
   padding: 20px;
   font-weight: 300;
+  margin: auto;
   
   > * {
     margin-right: 10px;
     margin-left: 10px;
+    font-size: 25px;
   }
 }
 
 
 .poweredby {
-  text-align: center;
+  text-align: right;
   font-size: @font-size-small;
   padding: 20px;
   font-weight: 300;
@@ -292,6 +299,10 @@ article {
   .article-content {
     margin-bottom: 50px;
   }
+}
+
+#menu-toggle, .content-header .title {
+  display: none;
 }
 
 
