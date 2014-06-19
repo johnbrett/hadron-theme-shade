@@ -10,15 +10,15 @@ head
     //END INJECT
 body
     #wrapper
-        #header-wrapper.sidebar-wrapper
-            .sidebar-content
-            .sidebar-brand
-                .sidebar-brand-img
+        #header-wrapper.header-wrapper
+            .header-content
+            .header-brand
+                .header-brand-img
                     img(src="/public/img/brand_logo.jpg")
-                .sidebar-brand-title
+                .header-brand-title
                     a(href="/")= settings.website.title
-                .sidebar-brand-headline!= settings.website.headline
-            .sidebar-social
+                .header-brand-headline!= settings.website.headline
+            .header-social
                include partials/mainMenu
                // if settings.social.twitter.username
                //     div(style="text-align: center")

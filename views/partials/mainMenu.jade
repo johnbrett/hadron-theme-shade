@@ -1,6 +1,6 @@
 include ../mixins/menuItem
 
-ul.sidebar-nav
+ul.header-nav
   each item in settings.menu
     +menuItem(item.link, item.iconClass, item.label2)
   if auth.user

@@ -1,6 +1,5 @@
 @secondary-bg-color: #363F48;
 @secondary-fg-color: #fff;
-@sidebar-width: 300px;
 
 @import "lib/bootstrap/less/bootstrap.less";
 @import url("./tomorrow.css");
@@ -11,6 +10,7 @@
 
 a {
   text-decoration: none;
+  transition: all 0.4s ease 0s;
 
   &:hover {
     text-decoration: none;
@@ -18,15 +18,22 @@ a {
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
 }
 
 .page-content {
-  margin: 24px 70px;
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+  padding-top: 40px;
 }
 
 body{
   background-color: white;
+}
+
+img {
+  max-width: 100%;
 }
 
 /*********************************************
@@ -34,18 +41,6 @@ body{
 *********************************************/
 
 #wrapper {
-  transition: all 0.4s ease 0s;
-}
-
-#sidebar-wrapper {
-  top: 0;
-  left: @sidebar-width;
-  width: @sidebar-width;
-  background: @secondary-bg-color;
-  position: fixed;
-  height: 100%;
-  overflow-y: auto;
-  z-index: 1000;
   transition: all 0.4s ease 0s;
 }
 
@@ -60,7 +55,7 @@ body{
   background-repeat: no-repeat;
 }
 
-.sidebar-wrapper {
+.header-wrapper {
   color: @secondary-fg-color;
   a {
     color: @secondary-fg-color;
@@ -75,7 +70,7 @@ body{
   width: 100%;
 }
 
-.sidebar-nav {
+.header-nav {
   //position: absolute;
   //top: 0;
   //width: 250px;
@@ -148,16 +143,16 @@ body{
   padding: 20px;
 }
 
-.sidebar-brand {
+.header-brand {
   margin-top: 60px;
 
-  .sidebar-brand-title {
+  .header-brand-title {
     .h2;
     margin-top: 15px;
     text-align: center;
   }
 
-  .sidebar-brand-img {
+  .header-brand-img {
     width: 95px;
     height: 95px;
     border-radius: 100%;
@@ -175,7 +170,7 @@ body{
     }
   }
 
-  .sidebar-brand-headline {
+  .header-brand-headline {
     text-align: center;
     padding: 20px;
     font-weight: 300;
@@ -183,7 +178,7 @@ body{
   }
 }
 
-.sidebar-social {
+.header-social {
   font-size: @font-size-base * 2;
   text-align: center;
   padding: 20px;
@@ -225,27 +220,13 @@ body{
 *********************************************/
 
 @media (max-width: @screen-md) {
-  .page-content {
-    margin: 24px 15px;
-  }
 
   #wrapper {
     padding-left: 0;
   }
 
-  #sidebar-wrapper {
+  #header-wrapper {
     left: 0;
-  }
-
-  #wrapper.active {
-    position: relative;
-    left: @sidebar-width;
-  }
-
-  #wrapper.active #sidebar-wrapper {
-    left: @sidebar-width;
-    width: @sidebar-width;
-    transition: all 0.4s ease 0s;
   }
 
   #menu-toggle {
@@ -272,9 +253,6 @@ body{
 *********************************************/
 
 .article-list {
-  width: 80%;
-  max-width: 700px;
-  margin: auto;
 
   article {
     margin-top: 60px;
@@ -323,6 +301,12 @@ article {
 
   .article-content {
     margin-bottom: 50px;
+    font-family: 'Noto Serif', serif;
+    font-size: 0.9em;
+
+    h2, h3, h4, h5 {
+      font-family: 'Open Sans', sans-serif;
+    }
   }
 }
 
