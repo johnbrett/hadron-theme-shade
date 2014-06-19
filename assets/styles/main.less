@@ -25,6 +25,10 @@ h1 {
   margin: 24px 70px;
 }
 
+body{
+  background-color: white;
+}
+
 /*********************************************
           LAYOUT
 *********************************************/
@@ -51,7 +55,9 @@ h1 {
   height: 100%;
   overflow-y: auto;
   z-index: 1000;
-  transition: all 0.4s ease 0s;
+  background-image: url("http://24.media.tumblr.com/a4eb7b32205d366bbea47042a04e10a9/tumblr_n5e0d0qDIW1st5lhmo1_1280.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .sidebar-wrapper {
@@ -143,7 +149,7 @@ h1 {
 }
 
 .sidebar-brand {
-  margin-top: 10px;
+  margin-top: 60px;
 
   .sidebar-brand-title {
     .h2;
@@ -173,6 +179,7 @@ h1 {
     text-align: center;
     padding: 20px;
     font-weight: 300;
+    font-family: 'Noto Serif', serif;
   }
 }
 
@@ -265,6 +272,10 @@ h1 {
 *********************************************/
 
 .article-list {
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+
   article {
     margin-top: 60px;
     &:first-child {
@@ -272,20 +283,34 @@ h1 {
     }
     border-bottom: 1px solid #cacac8;
 
-    h2, h1 {
+    h1 {
       margin-top: 0;
       text-align: center;
     }
-    
+
+    h2 {
+      font-family: 'Open Sans', sans-serif;
+      margin-top: 10px;
+      margin-bottom: 18px;
+
+      a {
+        transition: all 0.4s ease 0s;
+      }
+    }
+
     .summary {
       margin-bottom: 20px;
+      font-family: 'Noto Serif', serif;
     }
   }
 }
 
 article {
   .timedate {
-    font-style: italic;
+    color: rgb(158, 171, 179);
+    display: inline;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
   }
   
   .lead {
@@ -301,8 +326,9 @@ article {
   }
 }
 
-#menu-toggle, .content-header .title {
-  display: none;
+#menu-toggle, .content-header, .poweredby {
+  display: none !important;
+  height: 0px
 }
 
 
