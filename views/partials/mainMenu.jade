@@ -4,5 +4,5 @@ ul.header-nav
   each item in settings.menu
     +menuItem(item.link, item.iconClass, item.label2)
   if auth.user
-    +menuItem('/admin', 'glyphicon glyphicon-cog', 'Admin')
-    +menuItem('/auth/logout', 'glyphicon glyphicon-log-out', 'Logout')
+    +menuItem('/admin', 'glyphicon glyphicon-cog', auth.user2)
+    +menuItem('/auth/logout', 'glyphicon glyphicon-log-out', auth.user2)
