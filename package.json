@@ -1,0 +1,28 @@
+{
+  "name": "hadron-theme-shade",
+  "version": "0.1.0",
+  "description": "Minimal landscape responsive theme for the hadron blogging platform.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnbrett/hadron-theme-shade.git"
+  },
+  "keywords": [
+    "hadron",
+    "theme",
+    "blog",
+    "shade",
+    "responsive",
+    "minimal",
+    "landscape"
+  ],
+  "author": "John Brett",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnbrett/hadron-theme-shade/issues"
+  },
+  "homepage": "https://github.com/johnbrett/hadron-theme-shade",
+  "peerDependencies": {
+    "hadron": "~0.3.0",
+    "particles-font-awesome": "~0.3.0"
+  }
+}
