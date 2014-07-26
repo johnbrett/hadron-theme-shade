@@ -12,9 +12,11 @@
           label.control-label(for="headline") Blog headlines
           textarea.form-control(name="headline", ng-model="settings.website.headline", placeholder="")
   
+
         div.form-group(ng-class="{'has-error': hasError('website.bannerImage')}")
           label.control-label(for="bannerImage") Blog Banner Images
           input.form-control(name="bannerImage", ng-model="settings.website.bannerImage", placeholder="Add banner image...")
-  
+
+
         div.actions
           a.btn.btn-primary(type="button", ng-click="save(settings, website.$invalid)") Save
