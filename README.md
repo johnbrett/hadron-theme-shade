@@ -2,11 +2,10 @@
 # Hadron Shade Theme
 
 This is an alternate template for [hadron](https://github.com/hadronjs/hadron),
-largely based off the Medium default theme and the [hadron-nodus-theme](https://github.com/hadronjs/hadron-theme-nodus) by [Mario Casciaro](https://github.com/mariocasciaro).
+largely based off the Medium default theme and the [hadron-nodus-theme](https://github.com/hadronjs/hadron-theme-nodus) by [Mario Casciaro](https://github.com/mariocasciaro), with a configurable banner image from Hadron admin.
 
-The banner image can be configured in the website settings page in Admin.
+You view a [live demo of the theme here](http://www.johnbrett.me) or a screenshot of it below:
 
-Overview Page:
 ![alt tag](https://raw.githubusercontent.com/johnbrett/hadron-theme-navy/master/theme-preview.jpg)
 
 All input and pull requests welcomed.
