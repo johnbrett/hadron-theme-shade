@@ -35,8 +35,6 @@ body
                if settings.social.github.username
                  a.fa.fa-github(href="https://github.com/#{settings.social.github.username}", target="_blank")
             .poweredby
-                | Proudly powered by 
-                a(href="https://github.com/hadronjs/hadron", target="_blank") Hadron
         #page-content-wrapper
             .content-header.visible-xs.visible-sm
                 a.btn.btn-default#menu-toggle(type="button",href="#")
@@ -45,6 +43,9 @@ body
                     = settings.website.title
             .page-content
                 block main
+    footer
+      section
+        | Proudly powered by Hadron
     block footer
     //INJECT:viewContributions:main-layout-body-footer
     //END INJECT
