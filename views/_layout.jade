@@ -34,7 +34,6 @@ body
                  a.fa.fa-linkedin(href="https://www.linkedin.com/in/#{settings.social.linkedin.username}", target="_blank")
                if settings.social.github.username
                  a.fa.fa-github(href="https://github.com/#{settings.social.github.username}", target="_blank")
-            .poweredby
         #page-content-wrapper
             .content-header.visible-xs.visible-sm
                 a.btn.btn-default#menu-toggle(type="button",href="#")
@@ -45,7 +44,13 @@ body
                 block main
     footer
       section
-        | Proudly powered by Hadron
+        | 
+        a(href="http://github.com/johnbrett/hadron-theme-shade", target="_blank") Hadron Shade Theme 
+        | created by 
+        a(href="http://johnbrett.me", target="_blank") John Brett
+      section
+        | This site is proudly powered by 
+        a(href="https://github.com/hadronjs/hadron", target="_blank") Hadron
     block footer
     //INJECT:viewContributions:main-layout-body-footer
     //END INJECT
