@@ -7,6 +7,10 @@
 /*********************************************
           GENERAL
 *********************************************/
+html, body {
+  height: 100%
+}
+
 body {
   font-size: 2rem
 }
@@ -52,21 +56,21 @@ h4, h5, h6 {
 }
 
 h1 {
-    font-size: 4.5rem;
+    font-size: 5rem;
     line-height: 1.2em;
     letter-spacing: -2px;
     text-indent: -3px;
 }
 
 h2 {
-    font-size: 3.8rem;
+    font-size: 4rem;
     line-height: 1.2em;
     letter-spacing: -1px;
     text-indent: -2px;
 }
 
 h3 {
-    font-size: 3.4rem;
+    font-size: 3.5rem;
 }
 
 h4 {
@@ -82,11 +86,11 @@ h6 {
 }
 
 p, ul, ol, dl {
-  margin: 1.2em 0;
+margin: 1.2em 0;
 }
 
 p {
-  line-height: 1.6em;
+line-height: 1.6em;
 }
 
 li {
@@ -97,22 +101,20 @@ li {
           LAYOUT
 *********************************************/
 
-#wrapper {
-  transition: all 0.4s ease 0s;
-}
-
-#header-wrapper {
+header#header-wrapper {
   top: 0;
   background: @secondary-bg-color;
-  height: 100%;
   overflow-y: auto;
   z-index: 1000;
   background-image: url("http://24.media.tumblr.com/a4eb7b32205d366bbea47042a04e10a9/tumblr_n5e0d0qDIW1st5lhmo1_1280.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  height: 45%;
+  min-height: 406px;
+  overflow-y: hidden;
 }
 
-.header-wrapper {
+header.header-wrapper {
   color: @secondary-fg-color;
   a {
     color: @secondary-fg-color;
@@ -123,8 +125,9 @@ li {
   }
 }
 
-#page-content-wrapper {
+main#page-content-wrapper {
   width: 100%;
+  min-height: 33%
 }
 
 .header-nav {
@@ -185,6 +188,20 @@ li {
     line-height: 65px;
     display: inline-block;
   }
+}
+
+footer {
+  position: relative;
+  margin: 8rem 0 0 0;
+  padding: 3rem 0;
+  border-top: #EBF2F6 1px solid;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.7em;
+  color: #BBC7CC;
+  text-align: center;
+  background: #F7FAFB;
+  min-height: 13%;
 }
 
 #menu-toggle {
@@ -378,15 +395,7 @@ article {
   height: 0px
 }
 
-footer {
-  position: relative;
-  margin: 8rem 0 0 0;
-  padding: 3rem 0;
-  border-top: #EBF2F6 1px solid;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.3rem;
-  line-height: 1.7em;
-  color: #BBC7CC;
-  text-align: center;
-  background: #F7FAFB;
+.header-nav li span.glyphicon {
+  font-size: 23px;
+  top: 2px;
 }

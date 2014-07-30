@@ -13,35 +13,34 @@ head
         background-image: url("#{settings.website.bannerImage}");
       }
 body
-    #wrapper
-        #header-wrapper.header-wrapper
-            .header-content
-            .header-brand
-                .header-brand-img
-                    img(src="/public/img/brand_logo.jpg")
-                .header-brand-title
-                    a(href="/")= settings.website.title
-                .header-brand-headline!= settings.website.headline
-            .header-social
-               include partials/mainMenu
-               // if settings.social.twitter.username
-               //     div(style="text-align: center")
-               //         a.twitter-follow-button(href="https://twitter.com/#{settings.social.twitter.username}", data-show-count="false",data-lang="en")
-               //             | Follow @#{settings.social.twitter.username}
-               if settings.social.twitter.username
-                 a.fa.fa-twitter(href="https://twitter.com/#{settings.social.twitter.username}", target="_blank")
-               if settings.social.linkedin.username
-                 a.fa.fa-linkedin(href="https://www.linkedin.com/in/#{settings.social.linkedin.username}", target="_blank")
-               if settings.social.github.username
-                 a.fa.fa-github(href="https://github.com/#{settings.social.github.username}", target="_blank")
-        #page-content-wrapper
-            .content-header.visible-xs.visible-sm
-                a.btn.btn-default#menu-toggle(type="button",href="#")
-                    span.glyphicon.glyphicon-th-list
-                h1.title
-                    = settings.website.title
-            .page-content
-                block main
+    header#header-wrapper.header-wrapper
+        .header-content
+        .header-brand
+            .header-brand-img
+                img(src="/public/img/brand_logo.jpg")
+            .header-brand-title
+                a(href="/")= settings.website.title
+            .header-brand-headline!= settings.website.headline
+        .header-social
+           include partials/mainMenu
+           // if settings.social.twitter.username
+           //     div(style="text-align: center")
+           //         a.twitter-follow-button(href="https://twitter.com/#{settings.social.twitter.username}", data-show-count="false",data-lang="en")
+           //             | Follow @#{settings.social.twitter.username}
+           if settings.social.twitter.username
+             a.fa.fa-twitter(href="https://twitter.com/#{settings.social.twitter.username}", target="_blank")
+           if settings.social.linkedin.username
+             a.fa.fa-linkedin(href="https://www.linkedin.com/in/#{settings.social.linkedin.username}", target="_blank")
+           if settings.social.github.username
+             a.fa.fa-github(href="https://github.com/#{settings.social.github.username}", target="_blank")
+    main#page-content-wrapper
+        .content-header.visible-xs.visible-sm
+            a.btn.btn-default#menu-toggle(type="button",href="#")
+                span.glyphicon.glyphicon-th-list
+            h1.title
+                = settings.website.title
+        .page-content
+            block main
     footer
       section
         | 
@@ -51,18 +50,18 @@ body
       section
         | This site is proudly powered by 
         a(href="https://github.com/hadronjs/hadron", target="_blank") Hadron
-    block footer
-    //INJECT:viewContributions:main-layout-body-footer
-    //END INJECT
+  block footer
+  //INJECT:viewContributions:main-layout-body-footer
+  //END INJECT
+  script.
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+    });
+  if(settings.social.twitter.username)
     script.
-      $("#menu-toggle").click(function(e) {
-          e.preventDefault();
-          $("#wrapper").toggleClass("active");
-      });
-    if(settings.social.twitter.username)
-      script.
-        /*Twitter button
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
-        if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-        */
+      /*Twitter button
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+      if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      */
