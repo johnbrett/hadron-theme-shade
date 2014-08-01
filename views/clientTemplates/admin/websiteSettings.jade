@@ -17,6 +17,11 @@
           label.control-label(for="bannerImage") Blog Banner Images
           input.form-control(name="bannerImage", ng-model="settings.website.bannerImage", placeholder="Add banner image...")
 
+          
+        div.form-group(ng-class="{'has-error': hasError('website.profileImage')}")
+          label.control-label(for="profileImage") Profile Image
+          input.form-control(name="profileImage", ng-model="settings.website.profileImage", placeholder="Enter the profile image url", required)
+          
 
         div.actions
           a.btn.btn-primary(type="button", ng-click="save(settings, website.$invalid)") Save

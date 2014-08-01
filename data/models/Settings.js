@@ -6,7 +6,8 @@ module.exports = function(Settings) {
       required: true
     },
     headline: String,
-    bannerImage: String
+    bannerImage: String,
+    profileImage: String
   });
   
 
