@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/johnbrett/hadron-theme-shade",
   "peerDependencies": {
-    "hadron": "~0.3.0",
-    "particles-font-awesome": "~0.3.0"
+    "hadron": "~0.3.x",
+    "particles-font-awesome": "~0.3.x"
   }
 }
