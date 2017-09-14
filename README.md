@@ -8,8 +8,6 @@ Features:
 - configurable banner image
 - configurable profile image
 
-You view a [live demo of the theme here](http://www.johnbrett.me) or a screenshot of it below:
-
 ![alt tag](https://raw.githubusercontent.com/johnbrett/hadron-theme-navy/master/theme-preview.jpg)
 
 All input and pull requests welcomed.
